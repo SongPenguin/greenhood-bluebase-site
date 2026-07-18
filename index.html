@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="GreenHood vs BlueBase — live 24H ETH volume race" />
+  <title>GreenHood vs BlueBase</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="battle">
+      <article class="card green-card">
+        <div class="card-head">
+          <div>
+            <div class="chain">ROBINHOOD CHAIN</div>
+            <h1>GreenHood</h1>
+            <div class="ticker">$GHOOD</div>
+          </div>
+          <img src="/assets/greenhood-knight.png" alt="GreenHood knight" />
+        </div>
+
+        <div class="volume green-volume" id="green24h">—</div>
+        <div class="volume-label">ETH · 24H VOLUME</div>
+
+        <div class="rows">
+          <div><span>Total Volume</span><strong id="greenTotal">—</strong></div>
+          <div><span>Liquidity</span><strong>—</strong></div>
+          <div><span>Market Cap</span><strong>—</strong></div>
+          <div><span>Holders</span><strong>—</strong></div>
+          <div><span>Unique Traders</span><strong>—</strong></div>
+        </div>
+      </article>
+
+      <div class="versus">
+        <div class="vs">VS</div>
+        <div class="leader-label">CURRENT LEADER</div>
+        <div class="leader" id="leader">LOADING</div>
+        <div class="gap" id="gap">—</div>
+      </div>
+
+      <article class="card blue-card">
+        <div class="card-head">
+          <div>
+            <div class="chain">BASE</div>
+            <h1>BlueBase</h1>
+            <div class="ticker">$BBASE</div>
+          </div>
+          <img src="/assets/bluebase-knight.png" alt="BlueBase knight" />
+        </div>
+
+        <div class="volume blue-volume" id="blue24h">—</div>
+        <div class="volume-label">ETH · 24H VOLUME</div>
+
+        <div class="rows">
+          <div><span>Total Volume</span><strong id="blueTotal">—</strong></div>
+          <div><span>Liquidity</span><strong>—</strong></div>
+          <div><span>Market Cap</span><strong>—</strong></div>
+          <div><span>Holders</span><strong>—</strong></div>
+          <div><span>Unique Traders</span><strong>—</strong></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="race">
+      <div class="race-head">
+        <div>
+          <div class="chain">LIVE BATTLE</div>
+          <h2>24H Volume Race</h2>
+        </div>
+        <div class="status" id="status">Loading on-chain data…</div>
+      </div>
+
+      <div class="bar">
+        <div class="bar-green" id="greenBar"></div>
+        <div class="bar-blue" id="blueBar"></div>
+      </div>
+
+      <div class="bar-labels">
+        <span>GREEN <b id="greenPercent">50.0%</b></span>
+        <span><b id="bluePercent">50.0%</b> BLUE</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>

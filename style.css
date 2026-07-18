@@ -1,0 +1,41 @@
+:root {
+  --bg:#07100b; --panel:#0b110d; --line:#27332b; --text:#f1f5f2;
+  --muted:#8d9a92; --green:#b7ff12; --blue:#5f66ff; --blue-strong:#1318ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);
+font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{display:flex;justify-content:center}
+.wrap{width:min(1480px,calc(100% - 40px));padding:34px 0 26px}
+.battle{display:grid;grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr);gap:28px;align-items:stretch}
+.card{min-height:710px;border:1px solid var(--line);border-radius:32px;padding:34px 34px 28px;background:rgba(8,14,10,.92)}
+.green-card{box-shadow:inset 0 0 40px rgba(183,255,18,.025)}
+.blue-card{box-shadow:inset 0 0 40px rgba(19,24,255,.045)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.chain{font:800 12px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.18em;color:var(--muted)}
+h1{margin:11px 0 5px;font-size:39px;letter-spacing:-.045em;line-height:1}
+.ticker{font:800 16px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
+.card-head img{width:128px;height:128px;object-fit:cover;border-radius:25px}
+.volume{margin-top:76px;font-size:clamp(72px,7vw,104px);font-weight:900;line-height:.95;letter-spacing:-.065em}
+.green-volume{color:var(--green)} .blue-volume{color:var(--blue)}
+.volume-label{margin-top:12px;font:800 13px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.16em;color:var(--muted)}
+.rows{margin-top:48px}
+.rows>div{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);font-size:18px}
+.rows span:first-child{color:#a7b1aa}.rows strong{color:var(--text);text-align:right}
+.versus{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.vs{font-size:64px;font-weight:900;letter-spacing:-.06em}
+.leader-label{margin-top:40px;font:800 11px/1.2 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.17em;color:var(--muted)}
+.leader{margin-top:10px;font-size:24px;font-weight:900}.gap{margin-top:8px;color:var(--muted);font-size:14px}
+.race{margin-top:22px;border:1px solid var(--line);border-radius:32px;background:rgba(8,14,10,.92);padding:32px 34px 30px}
+.race-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.race h2{margin:10px 0 0;font-size:32px;letter-spacing:-.04em}.status{color:var(--muted);font-size:13px}
+.bar{display:flex;height:48px;margin-top:32px;overflow:hidden;border-radius:999px;background:#0a0e0b}
+.bar-green{width:50%;background:var(--green);transition:width .35s ease}
+.bar-blue{width:50%;background:var(--blue-strong);transition:width .35s ease}
+.bar-labels{display:flex;justify-content:space-between;margin-top:10px;color:#98a39b;font-size:13px;font-weight:800}
+@media(max-width:980px){.battle{grid-template-columns:1fr}.versus{min-height:170px}.card{min-height:auto}}
+@media(max-width:600px){
+  .wrap{width:min(100% - 18px,1480px);padding-top:12px}.card,.race{border-radius:22px;padding:22px}
+  .card-head img{width:92px;height:92px;border-radius:20px}h1{font-size:31px}.volume{margin-top:54px}
+  .rows>div{font-size:15px}.race-head{align-items:flex-start;flex-direction:column}
+}
